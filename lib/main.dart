@@ -12,6 +12,8 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 50,
@@ -34,51 +36,35 @@ class MyApp extends StatelessWidget {
                     letterSpacing: 2.5,
                     fontWeight: FontWeight.bold),
               ),
-              Container(
-                padding: EdgeInsets.all(10),
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.phone,
-                      color:Colors.teal
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text('+639382738615',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'Source Sans Pro',
-                        fontSize: 20
-                      ),
-                    )
-                  ],
-                )
-              ),
-              Container(
-                padding: EdgeInsets.all(10),
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                child: Row(
-                  children: [
-                    Icon(
-                        Icons.mail,
-                        color: Colors.teal
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text('kevintuazon45@gmail.com',
-                    style: TextStyle(
-                      color: Colors.teal.shade900,
-                      fontFamily: 'Source Sans Pro',
-                      fontSize: 20
-                    ),
-                    )
-                  ]
+              SizedBox(
+                height: 20,
+                width: 100,
+                child: Divider(
+                  color: Colors.teal.shade100,
                 ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: Icon(Icons.phone, color: Colors.teal),
+                  title: Text('+639382738615',
+                      style: TextStyle(
+                          color: Colors.teal.shade900,
+                          fontFamily: 'Source Sans Pro',
+                          fontSize: 20)),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                    leading: Icon(Icons.mail, color: Colors.teal),
+                    title: Text(
+                      'kevintuazon45@gmail.com',
+                      style: TextStyle(
+                          color: Colors.teal.shade900,
+                          fontFamily: 'Source Sans Pro',
+                          fontSize: 20),
+                    )),
               )
             ],
           ),
